@@ -1,2 +1,4 @@
 node_modules/
 features/
+.cache/
+dist/

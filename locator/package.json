@@ -1,0 +1,16 @@
+{
+  "name": "locator",
+  "version": "1.0.0",
+  "description": "Create a fake user & fake company and locate both on Google Maps.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/faker": "^4.1.12",
+    "faker": "^4.1.0"
+  }
+}
