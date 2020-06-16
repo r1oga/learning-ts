@@ -1,17 +1,17 @@
-import faker from "faker";
+import faker from 'faker'
 
 export class User {
-  name: string;
+  name: string
   location: {
-    lat: number;
-    lon: number;
-  };
+    lat: number
+    lng: number
+  }
 
   constructor() {
-    this.name = faker.name.firstName();
+    this.name = faker.name.firstName()
     this.location = {
       lat: +faker.address.latitude(),
-      lon: +faker.address.longitude(),
-    };
+      lng: +faker.address.longitude()
+    }
   }
 }
