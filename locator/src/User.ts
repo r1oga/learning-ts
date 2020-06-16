@@ -14,4 +14,8 @@ export class User {
       lng: +faker.address.longitude()
     }
   }
+
+  markerContent(): string {
+    return `User name is ${this.name}`
+  }
 }

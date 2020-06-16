@@ -5,6 +5,7 @@ interface Markable {
     lat: number
     lng: number
   }
+  markerContent(): string
 }
 export class CustomMap {
   private googleMap: google.maps.Map
@@ -24,7 +25,7 @@ export class CustomMap {
 
     // add info Window
     marker.addListener('click', () => {
-      const infoWindow = new google.maps.InfoWindow({ content: `hello` })
+      const infoWindow = new google.maps.InfoWindow({ content: markable.markerContent() })
       infoWindow.open(this.googleMap, marker)
     })
   }
