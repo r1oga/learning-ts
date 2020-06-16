@@ -1,11 +1,14 @@
 import faker from 'faker'
+import { Markable } from './CustomMap'
 
-export class User {
+export class User implements Markable {
   name: string
   location: {
     lat: number
     lng: number
   }
+
+  color = 'blue'
 
   constructor() {
     this.name = faker.name.firstName()

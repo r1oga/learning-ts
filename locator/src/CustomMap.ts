@@ -1,11 +1,12 @@
 /// <reference types="@types/googlemaps" />
 
-interface Markable {
+export interface Markable {
   location: {
     lat: number
     lng: number
   }
   markerContent(): string
+  color: string
 }
 export class CustomMap {
   private googleMap: google.maps.Map
