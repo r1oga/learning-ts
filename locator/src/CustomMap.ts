@@ -1,7 +1,11 @@
 /// <reference types="@types/googlemaps" />
-import { User } from './User'
-import { Company } from './Company' // refers to class and to type
 
+interface Markable {
+  location: {
+    lat: number
+    lng: number
+  }
+}
 export class CustomMap {
   private googleMap: google.maps.Map
 
@@ -12,16 +16,10 @@ export class CustomMap {
     })
   }
 
-  addUserMarker(user: User): void {
+  addMarker(markable: Markable) {
     new google.maps.Marker({
       map: this.googleMap,
-      position: { lat: user.location.lat, lng: user.location.lng }
-    })
-  }
-  addCompanyMarker(company: Company): void {
-    new google.maps.Marker({
-      map: this.googleMap,
-      position: { lat: company.location.lat, lng: company.location.lng }
+      position: { lat: markable.location.lat, lng: markable.location.lng }
     })
   }
 }
