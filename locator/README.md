@@ -2,13 +2,10 @@
 
 Create a fake user & fake company and locate both on Google Maps.
 
-# Requirements
+## Bundle file
 
-- [Deno](https://deno.land/)
-- [Denon](https://deno.land/x/denon)
+`/src $ deno bundle index.js index.bundle.ts`
 
-# Getting start
+## Resource
 
-In two different terminals:  
-`denon -c build/denon.json start`  
-`denon -c src/denon.json build`
+- [Faker](https://github.com/Marak/Faker.js)
